@@ -50,5 +50,32 @@ class Calculator {
         }
        
       }
+      start() {
+        this.buttons = this.el.querySelectorAll(".number");
+        this.operatorsEl = this.el.querySelectorAll(".operators");
+        this.inputEl = this.el.querySelector(".inputText");
+        this.equalsEl = this.el.querySelector(".result");
+        this.deleteEL = this.el.querySelector(".deleteValue");
+        this.plusMinusEL = this.el.querySelector(".plusMinus");
+    
+        this.buttons.forEach(elem => {
+          elem.addEventListener("click", this.numberButtonClickListener.bind(this));
+        });
+        this.operatorsEl.forEach(elem => {
+          elem.addEventListener(
+            "click",
+            this.operationButtonClickListener.bind(this)
+          );
+        });
+        this.equalsEl.addEventListener(
+          "click",
+          this.resultButtonClickListener.bind(this)
+        );
+        this.deleteEL.addEventListener(
+          "click",
+          this.deleteButtonClickListener.bind(this)
+        );
+        this.plusMinusEL.addEventListener("click", this.changeSign.bind(this));
+      }
   }
   
