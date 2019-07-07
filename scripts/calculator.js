@@ -88,5 +88,21 @@ class Calculator {
         this.firstNumber = +this.inputEl.value;
         this.inputEl.value = "";
       }
+
+      resultButtonClickListener() {
+        this.secondNumber = +this.inputEl.value;
+        if (!this.result) {
+          if (this.operation === "+") {
+            this.result = +this.firstNumber + this.secondNumber;
+          } else if (this.operation === "-") {
+            this.result = +this.firstNumber - this.secondNumber;
+          } else if (this.operation === "*") {
+            this.result = +this.firstNumber * this.secondNumber;
+          } else if (this.operation === "/") {
+            this.result = +this.firstNumber / this.secondNumber;
+          }
+          this.inputEl.value = +this.result;
+        }
+      }
   }
   
