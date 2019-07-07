@@ -50,6 +50,7 @@ class Calculator {
         }
         this.start();
       }
+
       start() {
         this.buttons = this.el.querySelectorAll(".number");
         this.operatorsEl = this.el.querySelectorAll(".operators");
@@ -76,6 +77,10 @@ class Calculator {
           this.deleteButtonClickListener.bind(this)
         );
         this.plusMinusEL.addEventListener("click", this.changeSign.bind(this));
+      }
+      
+      numberButtonClickListener(e) {
+        this.inputEl.value += e.currentTarget.name;
       }
   }
   
