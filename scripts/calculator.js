@@ -48,7 +48,7 @@ class Calculator {
           </div>
       </div>`;
         }
-       
+        this.start();
       }
       start() {
         this.buttons = this.el.querySelectorAll(".number");
