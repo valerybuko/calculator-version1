@@ -111,5 +111,9 @@ class Calculator {
         this.firstNumber = "";
         this.result = "";
       }
+
+      changeSign() {
+        if (this.inputEl.value !== "") this.inputEl.value *= -1;
+      }
   }
   
