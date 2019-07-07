@@ -104,5 +104,12 @@ class Calculator {
           this.inputEl.value = +this.result;
         }
       }
+
+      deleteButtonClickListener() {
+        this.inputEl.value = "";
+        this.secondNumber = "";
+        this.firstNumber = "";
+        this.result = "";
+      }
   }
   
