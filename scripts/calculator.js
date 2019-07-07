@@ -78,9 +78,15 @@ class Calculator {
         );
         this.plusMinusEL.addEventListener("click", this.changeSign.bind(this));
       }
-      
+
       numberButtonClickListener(e) {
         this.inputEl.value += e.currentTarget.name;
+      }
+
+      operationButtonClickListener(e) {
+        this.operation = e.currentTarget.name;
+        this.firstNumber = +this.inputEl.value;
+        this.inputEl.value = "";
       }
   }
   
